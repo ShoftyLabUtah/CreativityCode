@@ -5,6 +5,8 @@ Here are some notes about the included scripts:
 **beh_funcs.py**: 
 Functions related to subject behavior. Used in a number of other scripts.
 
+**decoding_funcs.py**: Makes df_by_freq_band (LFP power df), which gets used to make the all_dat files (add_patient_to_dat). Used for decoding analysis, but other things too.
+
 **connectivity_funcs.py**: 
 Functions related to connectivity, power correlations, and spectral coherence (phase-phase locking). Used in connectivity_over_time.py.
 
@@ -36,4 +38,10 @@ Includes AUT (alternate uses), OCT (object characterization), and BAT (basic ari
 **cebra_time_all_networks.py**: Run self-supervised CEBRA; plot embeddings and color code by trial type (AUT vs BAT). Decode trial type, holding out by patient. Find coding axis and project. Makes Fig. 3f-h and Supp. Fig. 5.
 
 **connectivity_over_time.py**: Connectivity analysis: COHERENCE (PPL) across time. Mixed effects models and patient level analysis. Makes Supp. Fig. 9.
+
+decoding_from_n_contacts.py: decode from different numbers of contacts, to make sure that we're not getting better decoding in some patients/networks purely because of more contacts.
+
+decoding_from_subset_contacts.py: decode from subsampled contacts. Get numner of DAN contacts, and subsample that many contacts from DMN and decode only from that number of DMN contacts
+
+
 
