@@ -66,6 +66,8 @@ decoding_from_subset_contacts.py: decode from subsampled contacts. Get numner of
 
 ANALYSIS OF CREATIVITY LEVEL (FIGURE 4)
 
+**network_states_ripple.py**: High vs. low originality states: finds signal power at different recording sites for high vs low creative states. Makes Figure 4a and Supp. Fig. 6a.
+
 **cebra_decoding_creativity_all_networks.py**: Trains CEBRA models and decodes originality score. Makes Figure 4c.
 
 **cebra_decoding_creativity_shuffle.py**: Train CEBRA on data with shuffled labels. Makes Supp Fig 6b.
