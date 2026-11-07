@@ -1,9 +1,10 @@
 ''' SVM DECODING TRIAL TYPE LEVEL FROM LFP POWER
 
-    1. Decode AUT vs BAT; ; compare scores for networks
+    1. Decode AUT vs BAT; ; compare scores for networks: MAKES FIGURE 3c
     2. decode high vs low; compare scores for networks 
 
-    Then make boxplots for both types of decoding to compare performance across networks
+    Then make boxplots for both types of decoding to compare performance across networks, and do stats
+
 
 '''
 
@@ -91,7 +92,7 @@ for network in networks:
         df_by_freq_band_to_decode = df.T
         # import pdb;pdb.set_trace()
 
-        '''#try only decoding from stimulus period'''
+        '''#uncomment the following to to only decode from stimulus period:'''
         # df_by_freq_band_to_decode = df_by_freq_band_to_decode[df_by_freq_band_to_decode.index.get_level_values('time')<10]
         # df = df_by_freq_band_to_decode.T
 
@@ -160,7 +161,6 @@ for network in networks:
 
         '''DECODE HIGH VS LOW ORIGINALITY (CATEGORICAL): USE SVM'''
         clf = SVC(C=1, kernel='linear', tol=1e-6)
-        # clf = linear_model.RidgeClassifier()
         kf = KFold(n_splits=4)
         predictions = []
         scores = []
@@ -175,8 +175,6 @@ for network in networks:
             train = df_by_freq_band_to_decode_AUT.drop(columns=trial)
             test = df_by_freq_band_to_decode_AUT[trial]
 
-            # train = df_by_freq_band_to_decode_AUT.iloc[:,list(train_idx)]
-            # test = df_by_freq_band_to_decode_AUT.iloc[:,list(test_idx)]
             
             clf.fit(train.T, train.columns.get_level_values('originality_cat'))
             predictions.extend(clf.predict(test.T))
@@ -306,69 +304,3 @@ for key in list(scores_all_networks_AUT_BAT.keys())[1:]:
 t,p = scipy.stats.mannwhitneyu(scores_all_networks_AUT_BAT['DMN'], scores_all)  #pvalue=0.009
 
 
-
-
-##################### DOWNSAMPLE CONTACTS: TRY DECODING FROM DIFFERENT SUBSETS OF CONTACTS ################
-import random
-
-n_contacts = 5
-n_repeats = 50
-from mpl_helpers import PdfPlotter
-PdfPlotter('Figures/decoding_across_num_contacts.pdf', fixed_margins = dict(left=110, right=90, top=90, bottom=90))
-
-for network in networks:
-    all_dat = pd.read_csv('pkl_files/store_neural_data_list_' + network + '.csv', header=[0, 1], index_col=[0, 1, 2, 3])
-    all_dat = pd.read_csv('pkl_files/store_neural_data_list_with_ripple' + network + '.csv', header=[0, 1], index_col=[0, 1, 2, 3])
-
-    patient_dfs = [group for _, group in all_dat.groupby(level='patient')]
-    cleaned_dfs = [df.dropna(axis=1, how='all') for df in patient_dfs]
-
-    neural_data_list_fixed = cleaned_dfs
-    df_by_freq_band_all = [neural_data.unstack('time') for neural_data in neural_data_list_fixed]
-
-
-    scores_downsampled_all_patients = []
-    for p, df in enumerate(df_by_freq_band_all):
-        print(p)
-        df_by_freq_band_to_decode = df.T
-
-
-        all_channels = df_by_freq_band_to_decode.index.get_level_values('channel').unique()
-
-        scores_downsampled_for_diff_num_contacts = []
-        for n_contacts in range(1, len(all_channels)+1):
-
-            scores_downsampled = []
-
-
-            for i in range(n_repeats):
-                sampled_channels = random.sample(list(all_channels), n_contacts)
-                subset = df_by_freq_band_to_decode.loc[df_by_freq_band_to_decode.index.get_level_values('channel').isin(sampled_channels)]
-                
-                answers_trial_type = []
-                scores = []
-                true_labels = []
-                
-                kf = KFold(n_splits=4)
-                for train_idx, test_idx in kf.split(subset.columns.get_level_values('trial_idx')):
-                    train = subset.iloc[:, list(train_idx)]
-                    test = subset.iloc[:, list(test_idx)]
-                    clf = SVC(C=1, kernel='linear', tol=1e-6)
-                    clf.fit(train.T, train.columns.get_level_values('trial_type'))
-                    answers_trial_type.extend(clf.predict(test.T))
-                    scores.append(clf.score(test.T, test.columns.get_level_values('trial_type')))
-                
-                scores_downsampled.append(np.mean(scores))
-            scores_downsampled_for_diff_num_contacts.append(np.mean(scores_downsampled))
-        scores_downsampled_all_patients.append(scores_downsampled_for_diff_num_contacts)
-
-
-    f,ax = plt.subplots()
-    for scores in scores_downsampled_all_patients:
-        ax.plot(scores)
-    ax.set_xlabel('number contacts')
-    ax.set_ylabel('decoding accuracy')
-    ax.set_title('decoding performance for subsets of contacts (' + network + ')')
-
-plt.show()
-plt.close()
