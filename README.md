@@ -45,24 +45,25 @@ ANALYSIS OF COGNITIVE STATE (CREATIVITY VS. CONTROL TASKS) (FIGURE 3 and related
 
 **cebra_multi_AUT_BAT_OCT.py**: TRAIN MULTI SESSION MODEL; i.e., Pseudo-subject. Visualization of AUT vs. BAT vs. OCT as well as just AUT vs OCT embeddings (Supp. Fig. 4).
 
+decoding_from_n_contacts.py: decode trial type from different numbers of contacts, to make sure that we're not getting better decoding in some patients/networks purely because of more contacts.
 
+decoding_from_subset_contacts.py: decode from subsampled contacts. Get numner of DAN contacts, and subsample that many contacts from DMN and decode only from that number of DMN contacts
+
+**cebra_time_all_networks.py**: Run self-supervised CEBRA; plot embeddings and color code by trial type (AUT vs BAT). Decode trial type, holding out by patient. Find coding axis and project. Makes Fig. 3f-h and Supp. Fig. 5.
 
 ---
+
+ANALYSIS OF CREATIVITY LEVEL (FIGURE 4)
 
 **cebra_decoding_creativity_all_networks.py**: Trains CEBRA models and decodes originality score. Makes Figure 4c.
 
 **cebra_decoding_creativity_shuffle.py**: Train CEBRA on data with shuffled labels. Makes Supp Fig 6b.
 
-
 **cebra_multi_creativity_axis_and_polynomial_regression.py**: Multi-session CEBRA to get creativity-level embedding. Makes creativity coding axis/projection, fitting LINEAR and then POLYNOMIAL regressions. Checks regression model performance for different polynomial degrees. Makes Fig. Fig. 4e-g; 4h-i (Linear regression) and Supp. Fig. 8a (polynomial regression). 
 
-**cebra_time_all_networks.py**: Run self-supervised CEBRA; plot embeddings and color code by trial type (AUT vs BAT). Decode trial type, holding out by patient. Find coding axis and project. Makes Fig. 3f-h and Supp. Fig. 5.
+
 
 **connectivity_over_time.py**: Connectivity analysis: COHERENCE (PPL) across time. Mixed effects models and patient level analysis. Makes Supp. Fig. 9.
-
-decoding_from_n_contacts.py: decode from different numbers of contacts, to make sure that we're not getting better decoding in some patients/networks purely because of more contacts.
-
-decoding_from_subset_contacts.py: decode from subsampled contacts. Get numner of DAN contacts, and subsample that many contacts from DMN and decode only from that number of DMN contacts
 
 
 
