@@ -21,6 +21,8 @@ Includes AUT (alternate uses), OCT (object characterization), and BAT (basic ari
 
 **cebra_decoding_AUT_BAT_all_networks.py**: Trains CEBRA models to separate AUT and BAT trials. Makes Supp. Fig. 2d.
 
-**cebra_decoding_creativity_all_networks.py**: Trains CEBRA models and decodes originality score. Makes Figure 4c and Supp Fig 6b (left, if uncomment line 211, to examine stimulus window)
+**cebra_decoding_creativity_all_networks.py**: Trains CEBRA models and decodes originality score. Makes Figure 4c.
 
 **cebra_decoding_creativity_shuffle.py**: Train CEBRA on data with shuffled labels. Makes Supp Fig 6b.
+
+**cebra_multi_AUT_BAT_OCT.py**: TRAIN MULTI SESSION MODEL; i.e., Pseudo-subject. Visualization of AUT vs. BAT vs. OCT as well as just AUT vs OCT embeddings (Supp. Fig. 4).
