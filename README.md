@@ -27,16 +27,17 @@ FIGURE 1
 
 ---
 
-FIGURE 2: SPECTROGRAMS
+SPECTROGRAMS (FIGURE 2)
 
 ---
 
-FIGURE 3 (and related supplementary figures, analyses, and stats): ANALYSIS OF COGNITIVE STATE (CREATIVITY VS. CONTROL TASKS)
+ANALYSIS OF COGNITIVE STATE (CREATIVITY VS. CONTROL TASKS) (FIGURE 3 and related supplementary figures, analyses, and stats)
 
-decoding_svm_AUT_BAT.py
+**decoding_svm_AUT_BAT.py**: Linear decoding of creativity (AUT) vs. arithmetic control (BAT) trial types. Makes Figure 3c. (Also does linear decoding of high vs. low originality.)
 
-decoding_LDA_AUT_OCT.py
+**decoding_LDA_AUT_OCT.py**: Linear decoding of creativity (AUT) vs. object characterization control (OCT) trial types. Makes Figure 3d.
 
+**cebra_cluster_networks.py**: Trains CEBRA model on AUT trials to separate networks. For Figure 3e and Supp. Fig. 3. 
 
 **cebra_decoding_AUT_BAT_all_networks.py**: Trains CEBRA models to separate AUT and BAT trials. Makes Supp. Fig. 2d.
 
@@ -44,7 +45,6 @@ decoding_LDA_AUT_OCT.py
 
 **cebra_multi_AUT_BAT_OCT.py**: TRAIN MULTI SESSION MODEL; i.e., Pseudo-subject. Visualization of AUT vs. BAT vs. OCT as well as just AUT vs OCT embeddings (Supp. Fig. 4).
 
-**cebra_cluster_networks.py**: Trains CEBRA model on AUT trials to separate networks. For Figure 3e and Supp. Fig. 3. 
 
 
 ---
