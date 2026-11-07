@@ -31,4 +31,5 @@ Includes AUT (alternate uses), OCT (object characterization), and BAT (basic ari
 
 **cebra_time_all_networks.py**: Run self-supervised CEBRA; plot embeddings and color code by trial type (AUT vs BAT). Decode trial type, holding out by patient. Find coding axis and project. Makes Fig. 3f-h and Supp. Fig. 5.
 
+**connectivity_over_time.py**: Connectivity analysis: COHERENCE (PPL) across time. Mixed effects models and patient level analysis. Makes Supp. Fig. 9.
 
