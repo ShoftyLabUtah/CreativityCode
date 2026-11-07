@@ -16,3 +16,11 @@ Includes AUT (alternate uses), OCT (object characterization), and BAT (basic ari
 **brain_vis_all_patients.py**: Generates gif of brain with electrode locations. For Figure 1d.
 
 **cebra_cluster_networks.py**: Trains CEBRA model on AUT trials to separate networks. For Figure 3e and Supp. Fig. 3. 
+
+**cebra_decoding_AUT_OCT_all_networks.py**: Trains CEBRA models to separate AUT and OCT trials. Cross validated training, then decode from embeddings. Gets stats for this. 
+
+**cebra_decoding_AUT_BAT_all_networks.py**: Trains CEBRA models to separate AUT and BAT trials. Makes Supp. Fig. 2d.
+
+**cebra_decoding_creativity_all_networks.py**: Trains CEBRA models and decodes originality score. Makes Figure 4c and Supp Fig 6b (left, if uncomment line 211, to examine stimulus window)
+
+**cebra_decoding_creativity_shuffle.py**: Train CEBRA on data with shuffled labels. Makes Supp Fig 6b, right.
