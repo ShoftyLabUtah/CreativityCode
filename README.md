@@ -8,6 +8,8 @@ FUNCTIONS FILES AND OTHER USEFUL SCRIPTS (e.g., making and saving files to use e
 
 **beh_funcs.py**: Functions related to subject behavior. Used in a number of other scripts.
 
+**DMN_LFP_funcs.py**: Functions related to LFP analysis. Used in most scripts. 
+
 **decoding_funcs.py**: Functions to makes df_by_freq_band (LFP power df), which gets used to make the all_dat files (add_patient_to_dat). Used for decoding analysis, but other things too. make_power_df for Blackrock and and make_power_df_ripple for Ripple.
 
 **connectivity_funcs.py**: Functions related to connectivity, power correlations, and spectral coherence (phase-phase locking). Used in connectivity_over_time.py (e.g., for Supp. Fig. 9)
