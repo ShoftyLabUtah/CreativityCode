@@ -28,3 +28,7 @@ Includes AUT (alternate uses), OCT (object characterization), and BAT (basic ari
 **cebra_multi_AUT_BAT_OCT.py**: TRAIN MULTI SESSION MODEL; i.e., Pseudo-subject. Visualization of AUT vs. BAT vs. OCT as well as just AUT vs OCT embeddings (Supp. Fig. 4).
 
 **cebra_multi_creativity_axis_and_polynomial_regression.py**: Multi-session CEBRA to get creativity-level embedding. Makes creativity coding axis/projection, fitting LINEAR and then POLYNOMIAL regressions. Checks regression model performance for different polynomial degrees. Makes Fig. Fig. 4e-g; 4h-i (Linear regression) and Supp. Fig. 8a (polynomial regression). 
+
+**cebra_time_all_networks.py**: Run self-supervised CEBRA; plot embeddings and color code by trial type (AUT vs BAT). Decode trial type, holding out by patient. Find coding axis and project. Makes Fig. 3f-h and Supp. Fig. 5.
+
+
