@@ -23,4 +23,4 @@ Includes AUT (alternate uses), OCT (object characterization), and BAT (basic ari
 
 **cebra_decoding_creativity_all_networks.py**: Trains CEBRA models and decodes originality score. Makes Figure 4c and Supp Fig 6b (left, if uncomment line 211, to examine stimulus window)
 
-**cebra_decoding_creativity_shuffle.py**: Train CEBRA on data with shuffled labels. Makes Supp Fig 6b, right.
+**cebra_decoding_creativity_shuffle.py**: Train CEBRA on data with shuffled labels. Makes Supp Fig 6b.
