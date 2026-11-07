@@ -26,3 +26,5 @@ Includes AUT (alternate uses), OCT (object characterization), and BAT (basic ari
 **cebra_decoding_creativity_shuffle.py**: Train CEBRA on data with shuffled labels. Makes Supp Fig 6b.
 
 **cebra_multi_AUT_BAT_OCT.py**: TRAIN MULTI SESSION MODEL; i.e., Pseudo-subject. Visualization of AUT vs. BAT vs. OCT as well as just AUT vs OCT embeddings (Supp. Fig. 4).
+
+**cebra_multi_session_polynomial_regression.py**: Multi-session CEBRA to get creativity-level embedding. Makes creativity coding axis/projection, fitting POLYNOMIAL regression. Checks regression model performance for different polynomial degrees. Makes Supp. Fig. 8a
