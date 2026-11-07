@@ -6,7 +6,7 @@ Here are some notes about the included scripts:
 
 FUNCTIONS FILES AND OTHER USEFUL SCRIPTS (e.g., making and saving files to use elsewhere)
 
-**patient_params**: Contains list of patient IDs and directories, referenced in all other code.
+**patient_params.py**: Contains list of patient IDs and directories, referenced in all other code.
 
 **beh_funcs.py**: Functions related to subject behavior. Used in a number of other scripts.
 
