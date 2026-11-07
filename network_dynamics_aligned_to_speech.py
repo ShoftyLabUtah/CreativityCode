@@ -2,6 +2,8 @@
 NETWORK DYNAMICS AVERAGED ACROSS PATIENTS
 RELATIVE TO SPEECH ONSET
 
+Makes Supp. Fig. 1b
+
 """
 
 import numpy as np
