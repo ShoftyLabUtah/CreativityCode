@@ -35,6 +35,14 @@ SPECTROGRAMS (FIGURE 2)
 
 ANALYSIS OF COGNITIVE STATE (CREATIVITY VS. CONTROL TASKS) (FIGURE 3 and related supplementary figures, analyses, and stats)
 
+**network_dynamics_AUT_BAT_include_ripple.py**: LFP power dynamics for high gamma and theta, comparing AUT and BAT. Includes Ripple patients. Makes Figure 3a.
+
+**network_dynamics_AUT_BAT_OCT.py**: LFP power dynamics for high gamma and theta, comparing AUT and OCT. Also option to compare AUT, BAT, and OCT (excluding Ripple patients). Makes Figure 3b.
+
+**network_dynamics_entire_block_with_ripple.py**: Makes Supp. Fig. 1a (similar to Fig. 3a, but covering entire block: all 3 trials in block). 
+
+**network_dynamics_aligned_to_speech.py**: Makes Supp. Fig. 1b
+
 **decoding_svm_AUT_BAT.py**: Linear decoding of creativity (AUT) vs. arithmetic control (BAT) trial types. Makes Figure 3c. (Also does linear decoding of high vs. low originality.)
 
 **decoding_LDA_AUT_OCT.py**: Linear decoding of creativity (AUT) vs. object characterization control (OCT) trial types. Makes Figure 3d.
@@ -53,6 +61,7 @@ decoding_from_subset_contacts.py: decode from subsampled contacts. Get numner of
 
 **cebra_time_all_networks.py**: Run self-supervised CEBRA; plot embeddings and color code by trial type (AUT vs BAT). Decode trial type, holding out by patient. Find coding axis and project. Makes Fig. 3f-h and Supp. Fig. 5.
 
+
 ---
 
 ANALYSIS OF CREATIVITY LEVEL (FIGURE 4)
@@ -66,6 +75,13 @@ ANALYSIS OF CREATIVITY LEVEL (FIGURE 4)
 
 
 **connectivity_over_time.py**: Connectivity analysis: COHERENCE (PPL) across time. Mixed effects models and patient level analysis. Makes Supp. Fig. 9.
+
+
+---
+
+SINGLE UNIT ANALYSIS
+
+make_spikes_dat.py
 
 
 
