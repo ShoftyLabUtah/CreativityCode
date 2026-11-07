@@ -5,6 +5,10 @@ Here are some notes about the included scripts:
 **beh_funcs.py**: 
 Functions related to subject behavior. Used in a number of other scripts.
 
+**connectivity_funcs.py**: 
+Functions related to connectivity, power correlations, and spectral coherence (phase-phase locking). Used in connectivity_over_time.py.
+
+
 behavior_analysis.py: 
 Visualize subject behavior for AUT trials. For Figure 1 b and c.
 
