@@ -21,6 +21,12 @@ Includes AUT (alternate uses), OCT (object characterization), and BAT (basic ari
 
 **add_patient_to_dat.py**: Only includes AUT and BAT trial types. Prompt asks whether to include ripple recordings as well. (3 patients recorded with Ripple instead of Blackrock. They only did AUT and BAT.)
 
+**plotting_funcs.py**: Occasionally used for plotting. (e.g., plot grid of embeddings).
+
+**save_mne_file.py**: save MNE "raw.fif" files, from the ns2 Blackrock recordings. 
+
+**save_mne_from_ripple.py**: same as above, but for Ripple recordings.
+
 ---
 
 FIGURE 1 
