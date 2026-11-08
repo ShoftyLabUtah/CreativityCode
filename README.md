@@ -89,13 +89,13 @@ ANALYSIS OF CREATIVITY LEVEL (FIGURE 4)
 
 ---
 
-SINGLE UNIT ANALYSIS
+SINGLE UNIT ANALYSIS (FIGURE 5)
 
-make_spikes_dat.py
+**make_spikes_dat.py**: makes and saves a spikes df so don't have to load NEV files each time. 
 
-single_units_psth_and_pie.py
+**single_units_psth_and_pie.py**: PSTHs (Figure 5a-d) and proportions pie chart (Figure 5e)
 
-single_unit_decoding_from_saved.py
+**single_unit_decoding_from_saved.py**: 1. SVM decode AUT vs BAT from single units. 2. CEBRA AUT vs BAT (Figure 5f-g). 3. CEBRA creativity level (Fig. 5j)
 
-single_unit_decode_AUT_OCT.py
+**single_unit_decode_AUT_OCT.py**: CEBRA AUT vs OCT (Figure 5h-i)
 
