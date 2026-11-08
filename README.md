@@ -95,7 +95,9 @@ SINGLE UNIT ANALYSIS (FIGURE 5)
 
 **single_units_psth_and_pie.py**: PSTHs (Figure 5a-d) and proportions pie chart (Figure 5e)
 
-**single_unit_decoding_from_saved.py**: 1. SVM decode AUT vs BAT from single units. 2. CEBRA AUT vs BAT (Figure 5f-g). 3. CEBRA creativity level (Fig. 5j)
+**single_unit_decoding_from_saved.py**: 1. SVM decode AUT vs BAT from single units, from saved AUT/BAT df. 2. CEBRA AUT vs BAT (Figure 5f-g). 3. Also does CEBRA creativity level, but can just run the script below instead.
+
+**single_unit_decoding_creativity_from_saved.py**: CEBRA/decoding creativity level, starting directly from saved AUT-only df (Figure 5j)
 
 **single_unit_decode_AUT_OCT.py**: CEBRA AUT vs OCT (Figure 5h-i)
 
