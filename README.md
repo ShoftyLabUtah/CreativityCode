@@ -63,9 +63,11 @@ ANALYSIS OF COGNITIVE STATE (CREATIVITY VS. CONTROL TASKS) (FIGURE 3 and related
 
 **cebra_multi_AUT_BAT_OCT.py**: TRAIN MULTI SESSION MODEL; i.e., Pseudo-subject. Visualization of AUT vs. BAT vs. OCT as well as just AUT vs OCT embeddings (Supp. Fig. 4).
 
-decoding_from_n_contacts.py: decode trial type from different numbers of contacts, to make sure that we're not getting better decoding in some patients/networks purely because of more contacts.
+decoding_from_n_contacts.py: Control analysis. Decode trial type from different numbers of contacts, to make sure that we're not getting better decoding in some patients/networks purely because of more contacts.
 
-decoding_from_subset_contacts.py: decode from subsampled contacts. Get numner of DAN contacts, and subsample that many contacts from DMN and decode only from that number of DMN contacts
+decoding_from_subset_contacts.py: Control analysis. Decode from subsampled contacts. Get numner of DAN contacts, and subsample that many contacts from DMN and decode only from that number of DMN contacts
+
+**decoding_svm_contact_level_and_mixed_models.py**: Control analysis (Supplementary Results). SVM decoder, but on a single contact level. To make sure poor DAN decoding not just due to low number of contacts. Mixed effects model + OLS. Leave one subject out robustness check.
 
 **cebra_time_all_networks.py**: Run self-supervised CEBRA; plot embeddings and color code by trial type (AUT vs BAT). Decode trial type, holding out by patient. Find coding axis and project. Makes Fig. 3f-h and Supp. Fig. 5.
 
