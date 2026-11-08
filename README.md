@@ -93,5 +93,9 @@ SINGLE UNIT ANALYSIS
 
 make_spikes_dat.py
 
+single_units_psth_and_pie.py
 
+single_unit_decoding_from_saved.py
+
+single_unit_decode_AUT_OCT.py
 
