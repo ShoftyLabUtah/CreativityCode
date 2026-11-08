@@ -83,10 +83,6 @@ ANALYSIS OF CREATIVITY LEVEL (FIGURE 4)
 **cebra_multi_creativity_axis_and_polynomial_regression.py**: Multi-session CEBRA to get creativity-level embedding. Makes creativity coding axis/projection, fitting LINEAR and then POLYNOMIAL regressions. Checks regression model performance for different polynomial degrees. Makes Fig. Fig. 4e-g; 4h-i (Linear regression) and Supp. Fig. 8a (polynomial regression). 
 
 
-
-**connectivity_over_time.py**: Connectivity analysis: COHERENCE (PPL) across time. Mixed effects models and patient level analysis. Makes Supp. Fig. 9.
-
-
 ---
 
 SINGLE UNIT ANALYSIS (FIGURE 5)
@@ -97,7 +93,16 @@ SINGLE UNIT ANALYSIS (FIGURE 5)
 
 **single_unit_decoding_from_saved.py**: 1. SVM decode AUT vs BAT from single units, from saved AUT/BAT df. 2. CEBRA AUT vs BAT (Figure 5f-g). 3. Also does CEBRA creativity level, but can just run the script below instead.
 
+**single_unit_decode_AUT_OCT.py**: CEBRA AUT vs OCT (Figure 5h-i)
+
 **single_unit_decoding_creativity_from_saved.py**: CEBRA/decoding creativity level, starting directly from saved AUT-only df (Figure 5j)
 
-**single_unit_decode_AUT_OCT.py**: CEBRA AUT vs OCT (Figure 5h-i)
+spikes_and_LFP_cebra_CCA.py: Creativity LFP- and spike-based coding axes and projections (Figure 5k). Then does CCA (Figure 5l).
+
+---
+
+CONNECTIVITY: 
+
+**connectivity_over_time.py**: Connectivity analysis: COHERENCE (PPL) across time. Mixed effects models and patient level analysis. Makes Supp. Fig. 9.
+
 
