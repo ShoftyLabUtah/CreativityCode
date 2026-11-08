@@ -39,6 +39,10 @@ FIGURE 1
 
 SPECTROGRAMS (FIGURE 2)
 
+**spectrogram_all_patients.py**
+
+**spectrograms_alt.py**
+
 ---
 
 ANALYSIS OF COGNITIVE STATE (CREATIVITY VS. CONTROL TASKS) (FIGURE 3 and related supplementary figures, analyses, and stats)
