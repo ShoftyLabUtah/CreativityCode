@@ -84,16 +84,6 @@ all_networks = []
 all_regions = []
 
 
-total_cell_num_all_patients = []
-
-num_AUT_suppressed_all_pts = []
-num_AUT_enhanced_all_pts = []
-num_BAT_suppressed_all_pts = []
-num_BAT_enhanced_all_pts = []
-num_OCT_suppressed_all_pts = []
-num_OCT_enhanced_all_pts = []
-
-
 source_data_rows = []
 
 for patient, data_loc, filename in patients_data:
