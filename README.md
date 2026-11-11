@@ -95,7 +95,9 @@ SINGLE UNIT ANALYSIS (FIGURE 5)
 
 **make_spikes_dat.py**: makes and saves a spikes df so don't have to load NEV files each time. 
 
-**single_units_psth_and_pie.py**: PSTHs (Figure 5a-d) and proportions pie chart (Figure 5e)
+**single_units_psth.py**: PSTHs (Figure 5a-d) 
+
+**single_units_pie.py**: Proportions pie chart (Figure 5e)
 
 **single_unit_decoding_from_saved.py**: 1. SVM decode AUT vs BAT from single units, from saved AUT/BAT df. 2. CEBRA AUT vs BAT (Figure 5f-g). 3. Also does CEBRA creativity level, but can just run the script below instead.
 
